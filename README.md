@@ -1,3 +1,5 @@
+![CI status](https://github.com/hexlet-boilerplates/ruby-gem/actions/workflows/master.yml/badge.svg)
+
 # SampleGem
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/sample_gem`. To experiment with that code, run `bin/console` for an interactive prompt.
