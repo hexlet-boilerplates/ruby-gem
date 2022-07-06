@@ -39,3 +39,5 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 [![Hexlet Ltd. logo](https://raw.githubusercontent.com/Hexlet/assets/master/images/hexlet_logo128.png)](https://hexlet.io?utm_source=github&utm_medium=link&utm_campaign=ruby-gem)
 
 This repository is created and maintained by the team and the community of Hexlet, an educational project. [Read more about Hexlet](https://hexlet.io?utm_source=github&utm_medium=link&utm_campaign=ruby-gem).
+
+See most active contributors on [hexlet-friends](https://friends.hexlet.io/).
