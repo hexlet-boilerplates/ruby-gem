@@ -10,4 +10,6 @@ lint-fix:
 test:
 	bundle exec rake test
 
+update-deps:
+	bundle update-interactive
 .PHONY: test
