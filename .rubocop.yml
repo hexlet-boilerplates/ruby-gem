@@ -1,8 +1,12 @@
 ---
 
-require:
+plugins:
   - rubocop-performance
+  - rubocop-rake
 
 AllCops:
   NewCops: enable
   TargetRubyVersion: 3.0
+
+Style/Documentation:
+  Enabled: false

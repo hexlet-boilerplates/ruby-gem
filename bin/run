@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'bundler/setup'
+require 'sample_gem'
+
+puts 'Enter the number:'
+number = gets.chomp.to_i
+
+user = SampleGem.half(number)
+
+puts user.inspect

@@ -3,6 +3,7 @@
 require 'sample_gem/version'
 
 module SampleGem
-  class Error < StandardError; end
-  # Your code goes here...
+  def self.half(num)
+    num / 2
+  end
 end
