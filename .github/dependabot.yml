@@ -1,0 +1,76 @@
+---
+# Dependabot configuration
+#
+# This file configures automated dependency updates for a small Ruby/Bundler project.
+#
+# Goals:
+#  - keep gem dependencies (runtime + development tools) up to date with minimal noise
+#  - keep GitHub Actions workflow updates separate from Ruby dependencies
+#  - batch minor and patch updates into a few focused PRs
+#  - keep potentially breaking (major) updates visible as separate PRs
+#
+# Grouping strategy:
+#  - GitHub Actions:
+#      - one grouped PR for minor/patch updates
+#      - one grouped PR for major updates
+#  - Bundler (Ruby gems):
+#      - one group for development/tooling gems (rubocop, solargraph, etc.)
+#      - one catch-all group for all remaining gems (runtime and others)
+#      - major updates are not grouped and will be opened as separate PRs by default
+#
+# Recommended documentation:
+#
+# 1) Dependabot Options Reference — full list of available keys,
+#    including "dependency-type", "groups", "update-types", etc.
+#    https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+#
+# 2) Optimizing pull request creation — best practices for grouping updates,
+#    controlling frequency, and limiting noise in development teams.
+#    https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/optimizing-pr-creation-version-updates
+#
+version: 2
+updates:
+  # 1) Keep GitHub Actions workflows up to date
+  - package-ecosystem: github-actions
+    directory: /  # Look for workflow files in the repo root
+    schedule:
+      interval: weekly  # Check for updates once a week
+    labels: [dependencies, automated, actions]
+    groups:
+      actions-minor-patch:
+        # Group all non-breaking (minor + patch) updates into a single PR
+        update-types: [minor, patch]
+      actions-major:
+        # Group all major updates for Actions into a separate PR
+        update-types: [major]
+  # 2) Ruby / Bundler dependencies (Gemfile + gemspec)
+  - package-ecosystem: bundler
+    directory: /  # Gemfile and gemspec are in the repo root
+    schedule:
+      interval: weekly
+    labels: [dependencies, automated, ruby]
+    groups:
+      ruby-dev-minor-patch:
+        # Development / tooling gems defined in the :development group:
+        #  - bundle_update_interactive
+        #  - minitest-power_assert
+        #  - rubocop, rubocop-* cops
+        #  - solargraph
+        #
+        # Minor and patch updates for these gems will be grouped into a single PR.
+        patterns:
+          - bundle_update_interactive
+          - minitest-power_assert
+          - rubocop
+          - rubocop-*
+          - solargraph
+        update-types: [minor, patch]
+      ruby-deps-minor-patch:
+        # Catch-all group for all other bundled gems:
+        #  - runtime dependencies from the gemspec
+        #  - rake (~> 13.1)
+        #  - any other gems that are not matched by ruby-dev-minor-patch
+        #
+        # Minor and patch updates for these dependencies will be grouped together.
+        # Major updates (for any gem) will be opened as separate PRs by default.
+        update-types: [minor, patch]
