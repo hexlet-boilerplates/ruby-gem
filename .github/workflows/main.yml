@@ -23,7 +23,11 @@ jobs:
 
       - name: Run Rubocop
         run: make lint
-      - name: SonarQube Scan
-        uses: SonarSource/sonarqube-scan-action@v8
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+      # NOTE: uncomment for use it
+      # Requires a SonarCloud project, a valid SONAR_TOKEN secret
+      # and a sonar-project.properties file with sonar.projectKey and sonar.organization
+      # - name: SonarQube Scan
+        # uses: SonarSource/sonarqube-scan-action@v8
+        # env:
+          # SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
