@@ -16,11 +16,15 @@ gem 'sample_gem'
 
 And then execute:
 
-    $ bundle install
+```text
+$ bundle install
+```
 
 Or install it yourself as:
 
-    $ gem install sample_gem
+```text
+$ gem install sample_gem
+```
 
 ## Usage
 
@@ -34,7 +38,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/sample_gem.
+Bug reports and pull requests are welcome on GitHub at <https://github.com/>[USERNAME]/sample_gem.
 
 [![Hexlet Ltd. logo](https://raw.githubusercontent.com/Hexlet/assets/master/images/hexlet_logo128.png)](https://hexlet.io?utm_source=github&utm_medium=link&utm_campaign=ruby-gem)
 
