@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in sample_gem.gemspec
 gemspec
 
-gem 'rake', '~> 13.1'
+gem 'rake', '~> 13.4'
 
 group :development do
   gem 'bundle_update_interactive'
