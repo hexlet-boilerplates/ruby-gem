@@ -1,5 +1,6 @@
 install:
 	bundle install
+	mise exec -- hk install --mise
 
 lint:
 	bundle exec rubocop

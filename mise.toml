@@ -1,0 +1,5 @@
+[tools]
+ruby = "latest"
+# Инструменты для git-хуков. Хук pre-push запускает `make lint` (hk.pkl).
+hk = "latest"
+pkl = "latest"

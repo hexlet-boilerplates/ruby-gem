@@ -13,10 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.4'
+      # Ставит Ruby и hk из mise.toml, версии зафиксированы в mise.lock
+      - uses: jdx/mise-action@v5
 
       - name: Install dependencies
         run: make install

@@ -6,6 +6,11 @@ Welcome to your new gem! In this directory, you'll find the files you need to be
 
 TODO: Delete this and the text above, and describe your gem
 
+## Requirements
+
+- [mise](https://mise.jdx.dev/), it installs Ruby and hk from `mise.toml`: `mise install`
+- Make
+
 ## Installation
 
 Add this line to your application's Gemfile:
