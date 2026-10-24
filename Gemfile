@@ -12,8 +12,6 @@ group :development do
   gem 'minitest-power_assert'
   gem 'rubocop'
   gem 'rubocop-performance'
-  gem 'rubocop-rails'
   gem 'rubocop-rake'
-  gem 'rubocop-rspec'
   gem 'solargraph'
 end
