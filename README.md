@@ -1,4 +1,4 @@
-![CI status](https://github.com/hexlet-boilerplates/ruby-gem/actions/workflows/master.yml/badge.svg)
+![CI status](https://github.com/hexlet-boilerplates/ruby-gem/actions/workflows/main.yml/badge.svg)
 
 # SampleGem
 
