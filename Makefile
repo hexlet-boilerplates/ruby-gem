@@ -4,6 +4,9 @@ install:
 
 lint:
 	bundle exec rubocop
+	rumdl check .
+	typos
+	jactionlint
 
 lint-fix:
 	bundle exec rubocop -A
